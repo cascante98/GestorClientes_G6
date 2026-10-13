@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="GestorClientes.Application/GestorClientes.Application.csproj" />
+  <Project Path="GestorClientes.Domain/GestorClientes.Domain.csproj" />
+  <Project Path="GestorClientes.Infrastructure/GestorClientes.Infrastructure.csproj" />
+  <Project Path="GestorClientes/GestorClientes.csproj" />
+</Solution>

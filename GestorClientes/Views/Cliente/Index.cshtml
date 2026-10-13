@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<link rel="stylesheet" href="~/css/cliente.css" asp-append-version="true" />
+
+<div class="duenno-page">
+
+    <div class="page-header">
+        <div class="page-header-content">
+            <div>
+                <div class="page-kicker"><i class="bi bi-circle-fill" aria-hidden="true"></i> Gestión de cartera</div>
+                <h1 class="page-title"><i class="bi bi-people-fill" aria-hidden="true"></i> Clientes</h1>
+                <p class="page-subtitle">Control de clientes y sus números de teléfono</p>
+            </div>
+            <button type="button" class="btn btn-crear" id="btnNuevoCliente">
+                <i class="bi bi-plus-lg"></i> Nuevo Cliente
+            </button>
+        </div>
+    </div>
+
+    <div id="mensajeGlobal" class="alert d-none" role="alert"></div>
+
+    <div class="table-card">
+        <div class="table-card-header">
+            <div>
+                <h2 class="table-card-title"><i class="bi bi-list-ul" aria-hidden="true"></i> Listado de Clientes</h2>
+                <p class="table-card-subtitle">Consultá, editá y administrá la información desde un solo lugar.</p>
+            </div>
+            <span class="table-pill"><i class="bi bi-shield-check" aria-hidden="true"></i> Directorio de clientes</span>
+        </div>
+        <div class="table-responsive">
+            <table id="tblCliente" class="table table-duenno" style="width:100%">
+                <thead>
+                    <tr>
+                        <th style="width:6%">Id</th>
+                        <th>Cédula</th>
+                        <th>Nombre completo</th>
+                        <th>Correo</th>
+                        <th>Teléfonos</th>
+                        <th style="width:16%">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <partial name="_Form" />
+    <partial name="_Detalle" />
+</div>
+
+@section Scripts {
+    <script src="~/js/cliente.js" asp-append-version="true"></script>
+}

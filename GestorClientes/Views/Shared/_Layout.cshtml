@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a142a" />
+    <title>@ViewData["Title"] - Gestor de Clientes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.3/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm app-navbar">
+            <div class="container-xl d-flex align-items-center justify-content-between gap-3">
+                <a class="navbar-brand brand-lockup" asp-controller="Cliente" asp-action="Index">
+                    <span class="brand-mark"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+                    <span>
+                        <span class="brand-name">Gestor de Clientes</span>
+                        <span class="brand-caption">Departamento de Cartera</span>
+                    </span>
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="nav-link active" asp-controller="Cliente" asp-action="Index" aria-current="page"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i> Clientes</a>
+                    <span class="app-status d-none d-sm-inline-flex">Panel administrativo</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-xl app-main">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="app-footer">
+        <div class="container-xl d-flex justify-content-between flex-wrap gap-2">
+            <span><span class="footer-name">Gestor de Clientes</span> · Departamento de Cartera</span>
+            <span>© 2026 · Programación Avanzada</span>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/3.1.3/js/dataTables.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
