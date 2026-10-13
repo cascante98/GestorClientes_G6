@@ -7,7 +7,7 @@
 * Kevin Mena Chinchilla
 
 ## 2. Repositorio
-N/A
+https://github.com/cascante98/GestorClientes_G6
 
 ## 3. Especificación básica del proyecto
 
